@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply min-h-screen overflow-x-hidden bg-garage-black text-zinc-100 antialiased;
+    font-family: 'Barlow', system-ui, sans-serif;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+  }
+
+  ::selection {
+    @apply bg-tiger-orange text-black;
+  }
+}
+
+@layer components {
+  .tt-shell {
+    @apply mx-auto w-full max-w-shell px-4 sm:px-6 lg:px-8;
+  }
+
+  .tt-panel {
+    @apply rounded-lg border border-white/10 bg-rubber/90 shadow-panel backdrop-blur;
+  }
+
+  .tt-panel-soft {
+    @apply rounded-lg border border-white/10 bg-white/[0.045] backdrop-blur;
+  }
+
+  .tt-eyebrow {
+    @apply font-condensed text-[0.72rem] font-black uppercase tracking-[0.28em] text-tiger-orange;
+  }
+
+  .tt-display {
+    @apply font-display uppercase leading-none tracking-[0.04em];
+  }
+
+  .tt-btn {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-md border px-4 py-2.5 font-condensed text-sm font-black uppercase tracking-[0.12em] transition duration-200 disabled:pointer-events-none disabled:opacity-50;
+  }
+
+  .tt-btn-primary {
+    @apply border-tiger-orange bg-tiger-orange text-black shadow-glow hover:-translate-y-0.5 hover:bg-orange-400;
+  }
+
+  .tt-btn-secondary {
+    @apply border-white/15 bg-white/[0.06] text-zinc-100 hover:border-tiger-orange/70 hover:text-tiger-orange;
+  }
+
+  .tt-btn-ghost {
+    @apply border-transparent bg-transparent text-zinc-400 hover:bg-white/[0.06] hover:text-white;
+  }
+
+  .tt-btn-danger {
+    @apply border-red-500/30 bg-red-950/45 text-red-200 hover:border-red-400 hover:text-white;
+  }
+
+  .tt-field {
+    @apply w-full rounded-md border border-white/10 bg-black/35 px-3.5 py-3 text-sm text-zinc-100 outline-none transition placeholder:text-zinc-600 focus:border-tiger-orange focus:ring-2 focus:ring-tiger-orange/20 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .tt-label {
+    @apply mb-2 block font-condensed text-[0.72rem] font-black uppercase tracking-[0.18em] text-tiger-orange;
+  }
+
+  .tt-card-hover {
+    @apply transition duration-200 hover:-translate-y-1 hover:border-tiger-orange/70 hover:shadow-lift;
+  }
+
+  .tt-badge {
+    @apply inline-flex items-center gap-1 rounded-full border px-2.5 py-1 font-condensed text-[0.68rem] font-black uppercase tracking-[0.14em];
+  }
+
+  .tt-table {
+    @apply min-w-full divide-y divide-white/10 text-left text-sm;
+  }
+
+  .tt-th {
+    @apply bg-black/35 px-4 py-3 font-condensed text-xs font-black uppercase tracking-[0.16em] text-zinc-400;
+  }
+
+  .tt-td {
+    @apply px-4 py-3 align-middle text-zinc-300;
+  }
+
+  .hero-garage {
+    background-image:
+      linear-gradient(90deg, rgba(7, 7, 7, 0.97) 0%, rgba(7, 7, 7, 0.74) 38%, rgba(7, 7, 7, 0.38) 74%, rgba(7, 7, 7, 0.78) 100%),
+      linear-gradient(180deg, rgba(7, 7, 7, 0.24), #070707 96%),
+      url('/design/garage-hero.webp');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .tread-bg {
+    background-image:
+      linear-gradient(180deg, rgba(7, 7, 7, 0.86), rgba(7, 7, 7, 0.95)),
+      url('/design/tread-texture.webp');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .steel-grid {
+    background-image:
+      linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+}
